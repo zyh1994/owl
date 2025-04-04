@@ -252,6 +252,7 @@ MODULE_DESCRIPTIONS = {
     "run_qwen_zh": "使用qwen模型处理任务",
     "run_azure_openai": "使用azure openai模型处理任务",
     "run_groq": "使用groq模型处理任务",
+    "run_router": "使用router模型处理任务",
 }
 
 
@@ -1067,14 +1068,14 @@ def create_ui():
                 # 只包含MODULE_DESCRIPTIONS中定义的模块
                 module_dropdown = gr.Dropdown(
                     choices=list(MODULE_DESCRIPTIONS.keys()),
-                    value="run_qwen_zh",
+                    value="run_router",
                     label="选择功能模块",
                     interactive=True,
                 )
 
                 # 模块描述文本框
                 module_description = gr.Textbox(
-                    value=MODULE_DESCRIPTIONS["run_qwen_zh"],
+                    value=MODULE_DESCRIPTIONS["run_router"],
                     label="模块描述",
                     interactive=False,
                     elem_classes="module-info",
